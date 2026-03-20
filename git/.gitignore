@@ -1,0 +1,23 @@
+# Claude Code - local settings (personal overrides, paths, permissions)
+.claude/settings.local.json
+
+# Claude Code - session/conversation data
+.claude/todos.json
+.claude/todos.local.json
+
+# Secrets - Claude Code can read these despite ignore rules,
+# so also use permissions.deny in .claude/settings.json
+.env
+.env.*
+
+# MacOS
+.DS_Store
+
+# Python
+*.pyc
+*.pyd
+*.pyo
+.pytest_cache
+.venv/
+__pycache__
+venv/
