@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
 log() { printf "[claude] %s\n" "$1"; }
 
 if [ ! -d ~/.claude ]; then
@@ -10,17 +8,13 @@ if [ ! -d ~/.claude ]; then
   mkdir -p ~/.claude
 fi
 
-tmpdir="$(mktemp -d)"
-log "Cloning claude to ${tmpdir}"
-git clone https://github.com/KingOfKalk/claude.git "${tmpdir}"
+log "Adding plugin marketplace"
+claude plugin marketplace add KingOfKalk/claude_code_plugins
 
-log "Removing .git from clone"
-rm -rf "${tmpdir}/.git"
-
-log "Copying contents to ~/.claude"
-cp -r "${tmpdir}"/.claude/. ~/.claude/
-
-log "Cleaning up"
-rm -rf "${tmpdir}"
+log "Installing plugins"
+claude plugin install commit@KingOfKalk:claude_code_plugins
+claude plugin install docker@KingOfKalk:claude_code_plugins
+claude plugin install docker-compose@KingOfKalk:claude_code_plugins
+claude plugin install statusline@KingOfKalk:claude_code_plugins
 
 log "Done."
