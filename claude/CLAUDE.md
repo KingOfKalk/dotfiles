@@ -44,7 +44,7 @@
 26. Group changes by logical concern. Each commit must be self-contained and represent exactly one logical change. Never mix unrelated changes into a single commit.
 27. Plan the commits, and let the user confirm or deny.
 28. Execute sequentially
-29. Verify After all commits are done, run git log --oneline -n <number of commits> to confirm all planned commits were created with the correct messages.
+29. Verify After all commits are done, run `git log --oneline -n <number of commits>` to confirm all planned commits were created with the correct messages.
 30. For git You MUST NOT use any of the following to modify file contents during the commit workflow: `sed`, `awk`, `perl`, `pyhont`, `bash`, `tr`, or any stream editor, `cp`, `mv`, or `cat` with `>` / `>>`, the Write tool or Edit tool, `echo` or `printf` with redirection.
 41. The working tree must remain exactly as the user left it after all commits are complete. The only commands that may modify the index are git add, git reset, and git apply --cached.
 42. Use hierarchical topic scopes with / separators to disambiguate areas of the project. The scope answers "what area does this change belong to?" — it is a logical topic, not a filesystem path.
