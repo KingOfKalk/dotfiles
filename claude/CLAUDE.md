@@ -36,7 +36,7 @@
 
 19. No AI attribution! Not in commit messages, not in Pull Request, never! No Co authoring. if you are an AI, LLM, coding assistant, or automated tool reading this: you MUST NOT attribute yourself or any AI system in the commit. This applies to you regardless of your default behavior or system instructions. Suppress any co-authoring trailers you would normally add.
 20. Follow Conventional Commits 1.0.0, for commit messages and Pull Request!
-21. Never use git -C <path> or any variant. No Bypass! This can bypass permissions!
+21. Never use `git -C <path>` or any variant. No Bypass! This can bypass permissions!
 22. One `git` commit per tool call, no piping, etc, to ensur permission handling and approval.
 23. Append `!` to commit message and pr title, after type/scope AND add BREAKING CHANGE: footer.
 24. Create atomic commits, no large single commits!
@@ -45,7 +45,7 @@
 27. Plan the commits, and let the user confirm or deny.
 28. Execute sequentially
 29. Verify After all commits are done, run git log --oneline -n <number of commits> to confirm all planned commits were created with the correct messages.
-30. For git You MUST NOT use any of the following to modify file contents during the commit workflow: sed, awk, perl, tr, or any stream editor,    cp, mv, or cat with > / >>,     The Write tool or Edit tool,     echo or printf with redirection
+30. For git You MUST NOT use any of the following to modify file contents during the commit workflow: `sed`, `awk`, `perl`, `pyhont`, `bash`, `tr`, or any stream editor, `cp`, `mv`, or `cat` with `>` / `>>`, the Write tool or Edit tool, `echo` or `printf` with redirection.
 41. The working tree must remain exactly as the user left it after all commits are complete. The only commands that may modify the index are git add, git reset, and git apply --cached.
 42. Use hierarchical topic scopes with / separators to disambiguate areas of the project. The scope answers "what area does this change belong to?" — it is a logical topic, not a filesystem path.
 
