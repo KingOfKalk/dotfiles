@@ -10,7 +10,14 @@ if [ ! -d ~/.claude ]; then
   mkdir -p ~/.claude
 fi
 
+tmpdir="$(mktemp -d)"
+log "Cloning claude to ${tmpdir}"
+git clone https://github.com/KingOfKalk/claude.git "${tmpdir}"
+
 log "Copying CLAUDE.md to ~/.claude"
-cp "${SCRIPT_DIR}/CLAUDE.md" ~/.claude/
+cp -r "${tmpdir}"/CLAUDE.md ~/.claude/.
+
+log "Cleaning up"
+rm -rf "${tmpdir}"
 
 log "Done."
