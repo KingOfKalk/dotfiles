@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 log() { printf "[claude] %s\n" "$1"; }
 
 if [ ! -d ~/.claude ]; then
