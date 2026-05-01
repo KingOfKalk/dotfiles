@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/KingOfKalk/dotfiles/compare/v0.3.0...v0.4.0) (2026-05-01)
+
+
+### Features
+
+* **oh-my-zsh:** add new compressed theme, make themes date and time locale aware ([#6](https://github.com/KingOfKalk/dotfiles/issues/6)) ([f0868f6](https://github.com/KingOfKalk/dotfiles/commit/f0868f67bd9b703aeb7b01e5b696bc62f7f1cfad))
+
 ## [0.3.0](https://github.com/KingOfKalk/dotfiles/compare/v0.2.0...v0.3.0) (2026-05-01)
 
 
