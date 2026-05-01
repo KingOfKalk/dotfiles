@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.3.0](https://github.com/KingOfKalk/dotfiles/compare/v0.2.0...v0.3.0) (2026-05-01)
+
+
+### Features
+
+* **oh-my-zsh:** update prompt in theme kingofkalk ([#5](https://github.com/KingOfKalk/dotfiles/issues/5)) ([6330885](https://github.com/KingOfKalk/dotfiles/commit/6330885a3c0a1b2884aa6f9ed9336c5493560aaa))
+
+
+### Bug Fixes
+
+* **claude:** define SCRIPT_DIR in setup.sh ([a657f1c](https://github.com/KingOfKalk/dotfiles/commit/a657f1cb8ebec934afa74480065986fd6d284360))
+
+
+### Documentation
+
+* **claude:** add README content with back link ([89f4d3b](https://github.com/KingOfKalk/dotfiles/commit/89f4d3b8099b164656f7c8e166a67b60f2a95a8f))
+* **claude:** format rules with code spans and expand banned tool list ([07b3582](https://github.com/KingOfKalk/dotfiles/commit/07b3582ab11144817198e7c2c3cf969b5fa62876))
+* **claude:** wrap git log command in code span in rule 29 ([e954026](https://github.com/KingOfKalk/dotfiles/commit/e9540265a40c423b6a415fad776bb72ba89ad27c))
+
+
+### Code Refactoring
+
+* **claude:** install CLAUDE.md by cloning external repo ([faea63d](https://github.com/KingOfKalk/dotfiles/commit/faea63d384c0b66723cc10f564b354edcca4a849))
+* **claude:** install local CLAUDE.md instead of cloning external repo ([8e911fc](https://github.com/KingOfKalk/dotfiles/commit/8e911fc087296ab6d3467285791b6675b485b398))
+
 ## [0.2.0](https://github.com/KingOfKalk/dotfiles/compare/v0.1.0...v0.2.0) (2026-04-13)
 
 
