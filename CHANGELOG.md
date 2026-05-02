@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/KingOfKalk/dotfiles/compare/v0.6.0...v0.6.1) (2026-05-02)
+
+
+### Bug Fixes
+
+* **git:** write config to ~/.config/git/config so VS Code can copy host ~/.gitconfig ([#16](https://github.com/KingOfKalk/dotfiles/issues/16)) ([fa4e937](https://github.com/KingOfKalk/dotfiles/commit/fa4e937a55db09a702589bee36e2400801ebce9e)), closes [#15](https://github.com/KingOfKalk/dotfiles/issues/15)
+
 ## [0.6.0](https://github.com/KingOfKalk/dotfiles/compare/v0.5.0...v0.6.0) (2026-05-02)
 
 
