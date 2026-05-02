@@ -20,4 +20,10 @@ cp -r "${tmpdir}"/CLAUDE.md ~/.claude/.
 log "Cleaning up"
 rm -rf "${tmpdir}"
 
+log "Adding plugin marketplace"
+claude plugin marketplace add anthropics/claude-plugins-official
+
+log "Installing plugins"
+claude plugin install superpowers@claude-plugins-official
+
 log "Done."

@@ -72,7 +72,7 @@ set backspace=indent,eol,start	" Backspace behaviour
 
 " Personal
 set t_Co=256 " Enable xterm 256 color
-colorscheme wombat256mod
+silent! colorscheme wombat256mod
 "highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
 
