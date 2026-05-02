@@ -1,5 +1,6 @@
 # Claude Code - local settings (personal overrides, paths, permissions)
 .claude/settings.local.json
+.claude/worktrees
 
 # Claude Code - session/conversation data
 .claude/todos.json
