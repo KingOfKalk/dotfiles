@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/KingOfKalk/dotfiles/compare/v0.5.0...v0.6.0) (2026-05-02)
+
+
+### Features
+
+* consolidate dotfiles-devcontainer into dotfiles ([#13](https://github.com/KingOfKalk/dotfiles/issues/13)) ([7bc901a](https://github.com/KingOfKalk/dotfiles/commit/7bc901a7fa063fe09c28aee02f74e43740285c69)), closes [#12](https://github.com/KingOfKalk/dotfiles/issues/12)
+
 ## [0.5.0](https://github.com/KingOfKalk/dotfiles/compare/v0.4.0...v0.5.0) (2026-05-02)
 
 
