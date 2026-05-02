@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/KingOfKalk/dotfiles/compare/v0.4.0...v0.5.0) (2026-05-02)
+
+
+### Features
+
+* **git:** add Claude's worktrees to .gitignore ([#10](https://github.com/KingOfKalk/dotfiles/issues/10)) ([ae55ce3](https://github.com/KingOfKalk/dotfiles/commit/ae55ce3613c95f8a52ec483c982bfc0f59ba2a33))
+
 ## [0.4.0](https://github.com/KingOfKalk/dotfiles/compare/v0.3.0...v0.4.0) (2026-05-01)
 
 
