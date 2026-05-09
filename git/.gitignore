@@ -25,3 +25,6 @@ venv/
 
 # PowerPoint
 ~*.pptx
+
+# Visual Studio Code
+.vscode
