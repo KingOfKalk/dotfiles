@@ -8,7 +8,6 @@ Some setup scripts install missing packages via `apt-get` when available (e.g. `
 
 ## Features
 
-- [claude](./claude/README.md)
 - [git](./git/README.md)
 - [oh-my-zsh](./oh-my-zsh/README.md)
 - [vim](./vim/README.md)
