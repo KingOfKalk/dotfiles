@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/KingOfKalk/dotfiles/compare/v0.6.1...v0.7.0) (2026-10-27)
+
+
+### Features
+
+* **claude:** Removes Claude. ([#20](https://github.com/KingOfKalk/dotfiles/issues/20)) ([98c8f95](https://github.com/KingOfKalk/dotfiles/commit/98c8f95280d7f2e378b3053f940dbda5bdc0f3c6))
+
 ## [0.6.1](https://github.com/KingOfKalk/dotfiles/compare/v0.6.0...v0.6.1) (2026-05-02)
 
 
