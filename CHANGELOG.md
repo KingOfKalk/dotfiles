@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.0](https://github.com/KingOfKalk/dotfiles/compare/v0.7.0...v0.8.0) (2026-11-05)
+
+
+### Features
+
+* **claude:** add claude setup script ([#23](https://github.com/KingOfKalk/dotfiles/issues/23)) ([c4fada7](https://github.com/KingOfKalk/dotfiles/commit/c4fada7397b7434eab7a50b431acee0a32779994))
+
+
+### Documentation
+
+* add contributing guide and pr template ([#22](https://github.com/KingOfKalk/dotfiles/issues/22)) ([b6589e1](https://github.com/KingOfKalk/dotfiles/commit/b6589e12e8be8074cbf3888a898a7973a46942ec))
+
 ## [0.7.0](https://github.com/KingOfKalk/dotfiles/compare/v0.6.1...v0.7.0) (2026-10-27)
 
 
