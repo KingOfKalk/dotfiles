@@ -32,7 +32,7 @@ Thanks for your interest. This repo follows a tight, issue-driven workflow. This
   - `chore` — maintenance, no production code change
   - `revert` — revert a previous commit
 - Scope: optional, lowercase, hierarchical with `/` separators. It names the logical area, not a file path.
-  - Be specific: use the feature name, e.g. `git`, `vim`, `oh-my-zsh`, `claude`.
+  - Be specific: use the feature name, e.g. `git`, `vim`, `oh-my-zsh`, `agent-instructions`.
   - Omit the scope for cross-cutting changes.
 - Description: imperative mood, lowercase, no trailing period.
 - Body: reference the issue with `Refs #<issue-number>` (if one exists).
