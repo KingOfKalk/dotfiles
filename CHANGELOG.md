@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/KingOfKalk/dotfiles/compare/v0.8.0...v0.8.1) (2026-11-05)
+
+
+### Bug Fixes
+
+* **claude:** skip plugin install when claude cli is missing ([#29](https://github.com/KingOfKalk/dotfiles/issues/29)) ([2e07935](https://github.com/KingOfKalk/dotfiles/commit/2e079358ddfdab0dd9a5a471f7e1a095a1738238)), closes [#28](https://github.com/KingOfKalk/dotfiles/issues/28)
+
 ## [0.8.0](https://github.com/KingOfKalk/dotfiles/compare/v0.7.0...v0.8.0) (2026-11-05)
 
 
