@@ -20,10 +20,14 @@ cp -r "${tmpdir}"/CLAUDE.md ~/.claude/.
 log "Cleaning up"
 rm -rf "${tmpdir}"
 
-log "Adding plugin marketplace"
-claude plugin marketplace add anthropics/claude-plugins-official
+if command -v claude &>/dev/null; then
+  log "Adding plugin marketplace"
+  claude plugin marketplace add anthropics/claude-plugins-official
 
-log "Installing plugins"
-claude plugin install superpowers@claude-plugins-official
+  log "Installing plugins"
+  claude plugin install superpowers@claude-plugins-official
+else
+  log "claude not found, skipping plugin install"
+fi
 
 log "Done."
