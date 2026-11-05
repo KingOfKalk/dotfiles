@@ -29,7 +29,9 @@ The install script iterates over each top-level directory, looks for a `setup.sh
 
 The test script iterates over each top-level directory, looks for a `test.sh`, and executes it. Each feature's `test.sh` verifies only what its own `setup.sh` did and skips checks for tools that aren't installed. The script prints a summary and exits non-zero if any feature test failed.
 
-CI runs `./install.sh` followed by `./test.sh` on every pull request and push to `main`.
+Set `JUNIT_OUTPUT=<path>` to also write a JUnit XML report.
+
+CI runs `./install.sh` followed by `./test.sh` on every pull request and push to `main`, and publishes the JUnit report as a check run.
 
 ## Visual Studio Code
 
