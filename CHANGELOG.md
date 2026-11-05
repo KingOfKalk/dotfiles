@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/KingOfKalk/dotfiles/compare/v0.9.0...v1.0.0) (2026-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* the `claude` module is removed; use `./install.sh agent-instructions` instead. The superpowers plugin is no longer installed.
+
+### Features
+
+* replace claude module with agent-instructions ([#35](https://github.com/KingOfKalk/dotfiles/issues/35)) ([4e7f8ef](https://github.com/KingOfKalk/dotfiles/commit/4e7f8efdbd2b1de9ea82bf6077bd38b0d056d842)), closes [#34](https://github.com/KingOfKalk/dotfiles/issues/34)
+
 ## [0.9.0](https://github.com/KingOfKalk/dotfiles/compare/v0.8.1...v0.9.0) (2026-11-05)
 
 
