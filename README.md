@@ -31,7 +31,7 @@ The test script iterates over each top-level directory, looks for a `test.sh`, a
 
 Set `JUNIT_OUTPUT=<path>` to also write a JUnit XML report.
 
-CI runs `./install.sh` followed by `./test.sh` on every pull request and push to `main`, and publishes the JUnit report as a check run.
+CI runs `./install.sh` followed by `./test.sh` on every pull request and push to `main`, and publishes the JUnit report to the job summary.
 
 ## Visual Studio Code
 
