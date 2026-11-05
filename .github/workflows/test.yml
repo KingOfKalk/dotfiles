@@ -20,6 +20,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y zsh
 
+      - name: Check install.sh arguments
+        run: |
+          ./install.sh --help
+          if ./install.sh does-not-exist; then exit 1; fi
+
       - name: Install dotfiles
         run: ./install.sh
 
