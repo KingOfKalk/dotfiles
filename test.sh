@@ -17,10 +17,16 @@ xml_escape() {
   printf '%s' "${s}"
 }
 
+# Microseconds since epoch (strips the locale-dependent decimal separator).
+now_us() { printf '%s' "${EPOCHREALTIME//[!0-9]/}"; }
+
+# Formats a microsecond duration as seconds, e.g. 0.123456.
+seconds() { printf '%d.%06d' $(($1 / 1000000)) $(($1 % 1000000)); }
+
 # Turns a feature's PASS/FAIL/SKIP lines into a JUnit <testsuite>.
 junit_suites=""
 junit_suite() {
-  local name="$1" output="$2" rc="$3"
+  local name="$1" output="$2" rc="$3" time="$4"
   local cases="" tests=0 failures=0 skipped=0 line status msg
   local pattern='^\[[^]]+\] (PASS|FAIL|SKIP) (.*)$'
   while IFS= read -r line; do
@@ -45,11 +51,12 @@ junit_suite() {
     failures=$((failures + 1))
     cases+="    <testcase classname=\"${name}\" name=\"${TEST_SCRIPT}\"><failure message=\"exited with code ${rc}\"/></testcase>"$'\n'
   fi
-  junit_suites+="  <testsuite name=\"${name}\" tests=\"${tests}\" failures=\"${failures}\" skipped=\"${skipped}\">"$'\n'
+  junit_suites+="  <testsuite name=\"${name}\" tests=\"${tests}\" failures=\"${failures}\" skipped=\"${skipped}\" time=\"${time}\">"$'\n'
   junit_suites+="${cases}  </testsuite>"$'\n'
 }
 
 log "Starting dotfiles tests from: ${SCRIPT_DIR}"
+run_start="$(now_us)"
 
 passed=()
 failed=()
@@ -59,14 +66,16 @@ for dir in "${SCRIPT_DIR}"/*/; do
     name="$(basename "${dir}")"
     log "Running ${dir}${TEST_SCRIPT}"
     rc=0
+    start="$(now_us)"
     output="$(cd "${dir}" && bash "${TEST_SCRIPT}" 2>&1)" || rc=$?
+    duration="$(seconds $(($(now_us) - start)))"
     printf '%s\n' "${output}"
     if [ "${rc}" -eq 0 ]; then
       passed+=("${name}")
     else
       failed+=("${name}")
     fi
-    junit_suite "${name}" "${output}" "${rc}"
+    junit_suite "${name}" "${output}" "${rc}" "${duration}"
   fi
 done
 
@@ -81,7 +90,8 @@ done
 if [ -n "${JUNIT_OUTPUT}" ]; then
   mkdir -p "$(dirname "${JUNIT_OUTPUT}")"
   {
-    printf '<?xml version="1.0" encoding="UTF-8"?>\n<testsuites>\n'
+    printf '<?xml version="1.0" encoding="UTF-8"?>\n<testsuites time="%s">\n' \
+      "$(seconds $(($(now_us) - run_start)))"
     printf '%s' "${junit_suites}"
     printf '</testsuites>\n'
   } >"${JUNIT_OUTPUT}"
