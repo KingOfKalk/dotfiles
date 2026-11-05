@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/KingOfKalk/dotfiles/compare/v0.8.1...v0.9.0) (2026-11-05)
+
+
+### Features
+
+* **install:** allow selective installation via positional args ([#32](https://github.com/KingOfKalk/dotfiles/issues/32)) ([348fc6e](https://github.com/KingOfKalk/dotfiles/commit/348fc6e1eab49b2ddf242afd87ec3a4586ff9cb0)), closes [#18](https://github.com/KingOfKalk/dotfiles/issues/18)
+
 ## [0.8.1](https://github.com/KingOfKalk/dotfiles/compare/v0.8.0...v0.8.1) (2026-11-05)
 
 
