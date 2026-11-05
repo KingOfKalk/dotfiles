@@ -21,6 +21,16 @@ Some setup scripts install missing packages via `apt-get` when available (e.g. `
 
 The install script iterates over each top-level directory, looks for a `setup.sh`, and executes it.
 
+## Test
+
+```bash
+./test.sh
+```
+
+The test script iterates over each top-level directory, looks for a `test.sh`, and executes it. Each feature's `test.sh` verifies only what its own `setup.sh` did and skips checks for tools that aren't installed. The script prints a summary and exits non-zero if any feature test failed.
+
+CI runs `./install.sh` followed by `./test.sh` on every pull request and push to `main`.
+
 ## Visual Studio Code
 
 See <https://code.visualstudio.com/docs/devcontainers/containers#_personalizing-with-dotfile-repositories> for how to wire this repo into your dev container automatically.
