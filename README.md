@@ -16,10 +16,12 @@ Some setup scripts install missing packages via `apt-get` when available (e.g. `
 ## Install
 
 ```bash
-./install.sh
+./install.sh            # all modules
+./install.sh git vim    # only the given modules, in that order
+./install.sh --help     # usage and available modules
 ```
 
-The install script iterates over each top-level directory, looks for a `setup.sh`, and executes it.
+Without arguments, the install script iterates over each top-level directory, looks for a `setup.sh`, and executes it. With arguments, it only runs the `setup.sh` of the given modules. Unknown modules abort before anything is installed.
 
 ## Test
 
