@@ -1,0 +1,37 @@
+name: test
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Install zsh
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zsh
+
+      - name: Install dotfiles
+        run: ./install.sh
+
+      - name: Run tests
+        run: ./test.sh
+        env:
+          JUNIT_OUTPUT: test-results/junit.xml
+
+      - name: Test report
+        uses: dorny/test-reporter@v3.0.0
+        if: ${{ !cancelled() }}
+        with:
+          name: Test results
+          path: test-results/junit.xml
+          reporter: java-junit
