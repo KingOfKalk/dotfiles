@@ -12,6 +12,7 @@ log "Configure git via XDG (~/.config/git/config) so VS Code can still copy host
 mkdir -p ~/.config/git
 GIT_CFG=~/.config/git/config
 git config --file "${GIT_CFG}" core.excludesFile '~/.gitignore'
+git config --file "${GIT_CFG}" init.defaultBranch main
 git config --file "${GIT_CFG}" pull.rebase true
 git config --file "${GIT_CFG}" push.autoSetupRemote true
 
