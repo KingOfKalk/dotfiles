@@ -33,6 +33,7 @@ expect_config() {
 if [ -f "${GIT_CFG}" ]; then
   pass "${GIT_CFG} exists"
   expect_config core.excludesFile '~/.gitignore'
+  expect_config init.defaultBranch main
   expect_config pull.rebase true
   expect_config push.autoSetupRemote true
 else
