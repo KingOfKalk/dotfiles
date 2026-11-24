@@ -47,7 +47,10 @@ Thanks for your interest. This repo follows a tight, issue-driven workflow. This
   - `Closes #<issue-number>` (omit if there is no issue).
   - **Summary**: 1–3 bullets on what changed and why.
   - **Test Plan**: how the change was verified (omit for pure docs/typo changes).
-- Label issues and PRs with existing labels only; don't create new ones.
+- Label issues and PRs with existing labels only; don't create new ones:
+  - Kind (optional): `bug` (broken behavior) or `idea` (not refined yet).
+  - Type: exactly one Conventional Commit type (`feat`, `fix`, `docs`, …) matching the PR title; add `breaking` for breaking changes.
+  - Status (issues, at most one): `status/refining` → `status/ready` → `status/in-progress` → `status/review`; `status/blocked` waits for the maintainer, `status/wont-do` is closed as not planned. Remove the status label when the issue is done.
 - After opening, watch CI checks if any are configured (`gh pr checks`) and review feedback (`gh pr view --comments`). Resolve conflicts by rebasing onto `main`.
 - Keep scope tight — open a separate PR for unrelated work.
 - Maintainer merges; do not self-merge.
