@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/KingOfKalk/dotfiles/compare/v1.0.0...v1.1.0) (2026-11-24)
+
+
+### Features
+
+* **git:** ignore opencode files globally ([#44](https://github.com/KingOfKalk/dotfiles/issues/44)) ([74c4a80](https://github.com/KingOfKalk/dotfiles/commit/74c4a8035e3e89858f72db4bedf305955b3decbb)), closes [#43](https://github.com/KingOfKalk/dotfiles/issues/43)
+* **git:** set init.defaultBranch to main ([#38](https://github.com/KingOfKalk/dotfiles/issues/38)) ([1782319](https://github.com/KingOfKalk/dotfiles/commit/1782319d0abd3837840d022c082813be1f7db48c)), closes [#37](https://github.com/KingOfKalk/dotfiles/issues/37)
+
 ## [1.0.0](https://github.com/KingOfKalk/dotfiles/compare/v0.9.0...v1.0.0) (2026-11-05)
 
 
